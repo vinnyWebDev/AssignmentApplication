@@ -9,4 +9,4 @@ cd AssignmentApplication/
 # install dependencies
 npm install
 # start process 
-pm2 start ./bin/ww --name assignment-app
+pm2 start ./bin/www -n assignment-app --env production
