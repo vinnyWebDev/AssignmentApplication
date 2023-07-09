@@ -8,5 +8,7 @@ pm2 stop assignment-app
 cd AssignmentApplication/
 # install dependencies
 npm install
+echo $PRIVATE_KEY > privatekey.pem
+echo $SERVER > server.crt
 # start process 
 pm2 start ./bin/www -n assignment-app --env production
