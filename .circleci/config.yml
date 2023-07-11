@@ -39,9 +39,9 @@ jobs:
             - ./node_modules
       - run: 
           name: docker-login
-          command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+          command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD docker.io
       - run:
-          name: Build Docker Imahe
+          name: Build Docker Image
           command: docker build -t $IMAGE_NAME:latest .
       - run:
           name: Publish Docker image
