@@ -13,7 +13,7 @@ docker pull $IMAGE_NAME
 
 #Check if a docker container exists with the name of node_app if it does remove the container
 CONTAINER_EXISTS=$(docker ps -a | grep node_app)
-if ["$CONTAINER_EXISTS"]
+if [ "$CONTAINER_EXISTS" ]
 then
   docker rm node_app
 fi
